@@ -8,6 +8,8 @@ class Animal:
         self.hidden = hidden
         if self.health > 0:
             Animal.alive.append(self)
+        else:
+            Animal.alive.remove(self)
 
     def __repr__(self) -> str:
         return (f"{{Name: {self.name}, Health: {self.health}, "
